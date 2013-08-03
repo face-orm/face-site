@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face - ORM for PHP</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Amaranth|Inconsolata' rel='stylesheet' type='text/css'>
+    <link href='./style.css' rel='stylesheet' type='text/css'>
+    <link href='./forkme.css' rel='stylesheet' type='text/css'>
+
+
+
+</head>
+<body>
+    <div id="body">
+
+        <div class="github-fork-ribbon-wrapper right-bottom">
+            <div class="github-fork-ribbon">
+                <a href="https://github.com/simonwhitaker/github-fork-ribbon-css">Star me on GitHub</a>
+            </div>
+        </div>
+
+        <div id="header" >
+
+            <div id="github">
+
+            <!--
+                <iframe
+                    src="http://ghbtns.com/github-btn.html?user=laemons&repo=face&type=watch&count=true&size=large"
+                    allowtransparency="true"
+                    frameborder="0"
+                    scrolling="0"
+                    width="152"
+                    height="30">
+                </iframe>
+            -->
+
+            </div>
+
+            <div id="title-block">
+                <h1>Face</h1>
+                <h2>Fast and Strong PHP ORM</h2>
+            </div>
+
+            <div id="leftmenu"> <a href="#">Installation</a> <a href="#">Documentation</a> </div>
+
+            <div id="rightmenu"> <a href="#">Support</a> <a href="#">About</a> </div>
+
+        </div>
+
+        <div id="content">
+
+            <div class="section">
+
+                <h3 style="margin:0">Face is a Modern ORM for PHP that uses the PHP 5.4 traits</h3>
+                <p><small>Traits are new PHP OOP structure brought with the version 5.4. <a href="http://php.net/trait">Learn more about traits</a></small></p>
+
+            </div>
+
+            <div class="section">
+
+                <h3>Why Face and what is the idea ?</h3>
+                <p>Two purposes are hidden behin face : performances and strength. Face tries to be strong, he is very efficient for joining tables and keeping children/parents relations between the entities, in the same time he is still easy to use and fast</p>
+
+                <p>Face is easy to install and once your database is ready, you can start a project in less than 10 minutes. That's why it is perfect for little and medium sized projects. </p>
+
+            </div>
+
+            <div class="section">
+
+                <h3>Starting a new project is really fast</h3>
+                <ol>
+                    <li><small style="color:#1a1a1a">1.</small> Create your database with <a href="http://www.mysql.fr/products/workbench/">mysql workbench</a></li>
+                    <li><small style="color:#1a1a1a">2.</small> Pick your favorite <a href="#frameworks">framework from the list</a> <small>(~5 minutes)</small></li>
+                    <li><small style="color:#1a1a1a">3.</small> Generate your models with the <a href="https://face.readthedocs.org/en/latest/installation/generation.html">Embryo tool</a> <small>(~5 minutes)</small></li>
+                    <li><small style="color:#1a1a1a">4.</small>  Code your awesome application using Face</li>
+                </ol>
+
+            </div>
+
+            <div class="section">
+
+                <h3>Joining table made easy thanks to the query builder</h3>
+                <p>You chose what you join, ease of use and performances are your best friends</p>
+
+                <div class="code-sample">
+    <span class="comment">// create a PDO object :</span>
+    <span class="pdo">$pdo</span><span> = new PDO('mysql:host=localhost;dbname=lemon-trees', 'login', 'pswd');</span>
+
+    <span class="comment">// Create a query to find some trees in the DB</span>
+    <span class="fquery">$fQuery</span><span> = </span><span class="tree">Tree</span><span>::<span class="builder">faceQueryBuilder</span>()</span>
+        <span>-></span><span class="builder">join</span><span>(</span><span class="qstring" >"lemons"</span><span>) </span><span class="comment">// trees have lemons</span>
+        <span>-></span><span class="builder">join</span><span>(</span><span class="qstring" >"lemons.seeds"</span><span>) /</span><span class="comment">/ each lemon has some seeds</span>
+        <span>-></span><span class="builder">join</span><span>(</span><span class="qstring" >"leafs"</span><span>)  </span><span class="comment">// trees have also leafs</span>
+        <span>-></span><span class="builder">where</span><span>(</span><span class="qstring" >"~age>10"</span><span>); </span><span class="comment">// only tree older than 10</span>
+
+    <span class="comment">// Get the datas from the db</span>
+    <span class="tree">$trees</span><span> =  </span><span class="builder">Face\ORM::execute</span><span>(</span><span class="fquery">$fQuery</span><span>, </span><span class="pdo">$pdo</span><span>);</span>
+
+    <span>echo count(</span><span class="tree">$trees</span><span>);</span>
+    <span>echo count(</span><span class="tree">$trees</span><span>[0]->getLeafs());</span>
+    <span>echo </span><span class="tree">$trees</span><span>[0]->getLeafs()[0]->getSize();</span>
+                </div>
+
+            </div>
+
+
+            <div class="section" id="frameworks">
+
+                <h3>Framework Integration</h3>
+                <p>Incoming</p>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div id="footer">We <img src="./love.png"/> open source community ! Help us to improve on github !</div>
+
+</body>
+</html>
