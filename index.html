@@ -7,15 +7,32 @@
     <link href='./style.css' rel='stylesheet' type='text/css'>
     <link href='./forkme.css' rel='stylesheet' type='text/css'>
 
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
 
 
 </head>
 <body>
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-42445239-1']);
+        _gaq.push(['_setDomainName', 'face-orm.org']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
     <div id="body">
 
         <div class="github-fork-ribbon-wrapper right-bottom">
             <div class="github-fork-ribbon">
-                <a href="https://github.com/simonwhitaker/github-fork-ribbon-css">Star me on GitHub</a>
+                <a href="https://github.com/laemons/face">Star me on GitHub</a>
             </div>
         </div>
 
@@ -41,9 +58,9 @@
                 <h2>Fast and Strong PHP ORM</h2>
             </div>
 
-            <div id="leftmenu"> <a href="#">Installation</a> <a href="#">Documentation</a> </div>
+            <div id="leftmenu"> <a href="http://face-orm.org">Home</a> <a href="http://docs.face-orm.org">Documentation</a> </div>
 
-            <div id="rightmenu"> <a href="#">Support</a> <a href="#">About</a> </div>
+            <div id="rightmenu"> <a href="#support">Support</a> <a href="#about">About</a> </div>
 
         </div>
 
@@ -59,7 +76,7 @@
             <div class="section">
 
                 <h3>Why Face and what is the idea ?</h3>
-                <p>Two purposes are hidden behin face : performances and strength. Face tries to be strong, he is very efficient for joining tables and keeping children/parents relations between the entities, in the same time he is still easy to use and fast</p>
+                <p>Two purposes are hidden behind face : performances and strength. Face tries to be strong, it is very efficient for joining tables and keeping children/parents relations between the entities, in the same time he is still easy to use and fast</p>
 
                 <p>Face is easy to install and once your database is ready, you can start a project in less than 10 minutes. That's why it is perfect for little and medium sized projects. </p>
 
@@ -112,10 +129,29 @@
             </div>
 
 
+            <div class="section" id="support">
+
+                <h3>Support</h3>
+                <p>We can help you with any question about Face</p>
+                <p>An IRC Channel is available at freenode : <b style="color:black">irc.freenode.net</b> - channel : <b style="color:black">#face-orm</b></p>
+
+            </div>
+
+
+            <div class="section" id="about">
+                <h3>About</h3>
+                <p>Face ORM is an open source project. All <a href="https://github.com/laemons/face">sources are available on github</a>.</p>
+                <p>The project was created and is maintained by <a href="https://github.com/SneakyBobito">Soufiane Ghzal</a></p>
+                <p>The project is licenced under BSD-3 licence.</p>
+            </div>
+
+
         </div>
     </div>
 
     <div id="footer">We <img src="./love.png"/> open source community ! Help us to improve on github !</div>
+
+
 
 </body>
 </html>
