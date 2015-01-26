@@ -54,8 +54,39 @@
     app.angular.controller('homeController', function($scope, $http) {
         $scope.$watch("assignments", function (value) {//I change here
             prettyPrint();
+
+            $("pre.prettyprint").css('opacity', 0).css("top",180)
+                .slideDown('slow')
+                .animate(
+                { opacity: 1 , top:0 },
+                { queue: false, duration: 'slow' }
+            );
+
         });
     });
+
+
+    $(document).scroll(function(e){
+
+        var s = $(this).scrollTop();
+
+    console.log(s);
+
+        if(s > 0 ){
+
+            if(s > 250 )
+                s = 250;
+
+            $(".heading_supersize").css("top", s / 2);
+            $(".welcome_text").css("top", s / 4);
+
+
+        }else{
+            $(".heading_supersize").add(".welcome_text").css("top",0);
+        }
+
+    });
+
 
 
 
