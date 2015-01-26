@@ -1,7 +1,7 @@
 var FaceS = function(options){
 
     this.language = options.language;
-    this.templatePath = "/langs";
+    this.templatePath = "dist/langs";
 
     this.angular = angular.module(options.ngApp, ['ngRoute']);
 

@@ -13,7 +13,7 @@ var cssPath = [
     './src/css/foundation.css',
     './src/css/main.css',
     './src/css/ligature.css',
-    './src/css/forkme.css',
+    './src/css/prettify.css',
     './src/css/app.css'
 ];
 
@@ -27,11 +27,17 @@ gulp.task('css', function () {
 });
 
 var jsPath = [
-    './src/vendor/angular/angular.min.js',
-    './src/vendor/angular-route/angular-route.min.js',
-    './src/js/modernizr.foundation.js',
+    './src/js/angular.js',
+    './src/js/angular-route.js',
+    './src/js/jquery.js',
+    './src/js/jquery.cookie.js',
+    './src/js/modernizr.js',
     './src/js/foundation.js',
-    './src/vendor/jquery.cookie/jquery.cookie.js',
+    './src/js/foundation.tooltip.js',
+    './src/js/foundation.topbar.js',
+
+    './src/js/prettify.js',
+
     './src/js/FaceS.js',
     './src/js/app.js'
 ];
@@ -51,7 +57,7 @@ gulp.task('translate', function() {
     var translations = ['en'];
 
     translations.forEach(function(translation){
-        gulp.src(['./src/pages/**/*.html','./src/index.html'])
+        gulp.src('./src/pages/**/*.html')
             .pipe(
             translate('./src/locales/'+ translation +'.yml')
                 .on('error', function(){

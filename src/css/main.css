@@ -65,9 +65,7 @@
   font-smoothing: antialiased;
 }
 
-body {background: #fafafa}
-
-.row {width: 960px}
+body {background: #f3f3f3}
 
 hr {
     -moz-border-bottom-colors: none;
@@ -87,7 +85,7 @@ hr {
 
 header {background: #f3f3f3; clear:both; padding: 20px 0 40px}
 
-.header_nav {background: #fafafa; padding: 15px 0 0; box-shadow: 0 1px 6px rgba(34, 25, 25, 0.6); z-index: 999}
+.header_nav {background: #000; padding: 15px 0 0; box-shadow: 0 1px 6px rgba(34, 25, 25, 0.6); z-index: 999}
 .header_nav_fullwidth {background: #fafafa; padding: 10px 0 2px; margin-bottom: 25px; box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4)}
 
 
@@ -615,5 +613,23 @@ ul.flyout li a:hover, .nav-bar li ul li a:hover { background: #151515; color: #f
 	.mi-slider nav {
 		display: none;
 	}
+}
+
+
+.gh-stars{
+	margin-top: 13px;
+	height: 20px;
+	width: 50px;
+}
+
+
+.code-sample-section{
+	margin-top: 50px;
+}
+.code-sample-section pre{
+	background: black;
+	margin-top: -50px;
+	padding: 12px 18px;
+	background: #141414;
 }
 
