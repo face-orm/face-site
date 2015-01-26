@@ -7,7 +7,7 @@ var FaceS = function(options){
 
 };
 
-FaceS.availableLanguages = ["fr","en"];
+FaceS.availableLanguages = ["en"];
 
 FaceS.hasSession = function(){
     return $.cookie("zep-session") == 1;
