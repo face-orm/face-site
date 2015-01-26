@@ -1,0 +1,9 @@
+en:
+
+  lang: en
+  title: Face ORM
+  description: "Face is a strong and moderne PHP ORM. It maps database schemas and relations to  Models (PHP object) and eases all database interactions"
+
+  header:
+    title: Face ORM
+    description: ORM designed for strengths and performances

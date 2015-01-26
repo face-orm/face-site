@@ -11,15 +11,15 @@
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width" />
 
-    <title>Face ORM</title>
+    <title>{{ title | translate }}</title>
 
-    <meta name="decription" content="Face is a strong and moderne PHP ORM. It maps database schemas and relations to  Models (PHP object) and eases all database interactions" />
+    <meta name="decription" content="{{ description | translate }}" />
 
     <!-- Included CSS Files (Compressed) -->
     <link rel="stylesheet" href="dist/app.css">
 
     <script type="text/javascript">
-        var appLang = "en";
+        var appLang = "{{ lang | translate }}";
     </script>
 
     <script src="dist/app.js" type="text/javascript"></script>
@@ -81,8 +81,8 @@
 <!-- ######################## Header ######################## -->
 
 <header>
-    <h1 class="heading_supersize">Face ORM</h1>
-    <h2 class="welcome_text">ORM designed for strengths and performances</h2>
+    <h1 class="heading_supersize">{{ header.title | translate }}</h1>
+    <h2 class="welcome_text">{{ header.description | translate }}</h2>
 </header>
 
 <!-- ######################## Section ######################## -->
