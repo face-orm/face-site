@@ -1,14 +1,14 @@
 .pln,
 .kwd {
-    color: #FFE000;
+    color: #2195C8;
 }
 
 .str {
-    color: #ffffff;
+    color: #BB9973;
 }
 
 .com {
-    color: #6B6B6B;
+    color: #BEBEBE;
 }
 .typ {
     color: #FF0029;
